@@ -71,6 +71,27 @@ these mark boat hazards, so the dataset declines to make a claim it cannot back.
 Open data: [`rocks.geojson`](https://rocks.opeongo.net/api/eaglelake/rocks.geojson) ·
 CC BY 4.0 · CORS-open · code MIT.
 
+### [PingTrail](https://github.com/clodemode/PingTrail)
+
+*Our internet feels slow — which segment is injecting the latency?* Every ping tool
+reports the round trip to one place. PingTrail fires ICMP at **every rung of a ladder at
+once** — loopback, your router, the second router inside the house, the first public
+ISP device, the resolver, the open internet, a distant anchor — and subtracts. Because
+every rung sees the same instant, the difference between adjacent rungs is attributable
+to the segment between them; stack the segments and the band that swells is the answer.
+
+It is the counterweight to the entry above. Here the framework is the right call: there
+is real request/response, templating and charting to do, so it is Django + HTMX +
+ECharts on the same harness as the rest of the fleet. Two links make the stack-choice
+claim demonstrable; one would make it an anecdote.
+
+The measurement discipline is the part worth reading: stacked bars, never lines, because
+a line invents latency between samples; negative deltas are kept, because a router that
+answers its own ICMP on a slow path while forwarding on the fast path is a real signal;
+and a rung at full loss whose downstream neighbour still answers is the tool's strongest
+finding, not a failure. The web app never pings — a host-side vantage owns the ICMP,
+since inside a container the default gateway is the bridge. Code MIT.
+
 ### In preparation
 
 **FinTrack** — double-entry accounting: statement reconciliation, bill scheduling, and
