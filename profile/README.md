@@ -29,9 +29,8 @@ capability lives. It looks up the character.
 | Kept as `truth` rows, in each app's test suite, and at the push gate that refuses a failing push. | Kept as structured entries: decisions, naming rules, specs, and the reasoning behind them, not scattered through comments and commit messages. Every entry can carry a `dont` (the failure it prevents) and a way to verify it. Hard-won knowledge survives the end of a session instead of being rediscovered by the next one. |
 
 TRUTH leads: a claim is only as good as the check behind it. The LORES are how the
-work gets there. Platform TRUTH and LORES live in
-[`about-lore`](https://github.com/clodemode/about-lore), and each app keeps its own,
-such as [`fintrack-lore`](https://github.com/clodemode/fintrack-lore).
+work gets there. The platform keeps its TRUTH and LORES in one repository, and each
+app keeps its own.
 
 ## By the numbers
 
